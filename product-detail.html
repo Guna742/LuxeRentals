@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Rent the Valentino Crimson Gala Gown — a stunning floor-length evening dress available through LUXE RENTALS.">
+    <title>Valentino Crimson Gala Gown — LUXE RENTALS</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💎</text></svg>">
+</head>
+
+<body>
+
+    <!-- ====== NAVIGATION ====== -->
+    <nav class="navbar" id="navbar">
+        <a href="index.html" class="nav-logo">LUXE<span>RENTALS</span></a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="collections.html">Collections</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="vip.html">VIP</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="vip.html" class="btn btn-primary nav-cta">Join Now</a></li>
+        </ul>
+        <div class="menu-toggle" id="menuToggle">
+            <span></span><span></span><span></span>
+        </div>
+    </nav>
+
+    <!-- ====== PRODUCT DETAIL ====== -->
+    <section class="product-detail">
+        <div class="container">
+            <!-- Breadcrumb -->
+            <div style="margin-bottom:32px;font-size:0.85rem;color:var(--gray-200);">
+                <a href="index.html" style="color:var(--gray-200);">Home</a>
+                <span style="margin:0 8px;color:var(--gray-400);">›</span>
+                <a href="index.html#products" style="color:var(--gray-200);">Evening Wear</a>
+                <span style="margin:0 8px;color:var(--gray-400);">›</span>
+                <span style="color:var(--gold);">Crimson Gala Gown</span>
+            </div>
+
+            <div class="product-detail-grid">
+                <!-- Gallery -->
+                <div class="product-gallery reveal">
+                    <img src="assets/evening-gown.png" alt="Valentino Crimson Gala Gown - Main View" class="main-image"
+                        id="mainImage">
+                    <div class="thumb-row">
+                        <img src="assets/evening-gown.png" alt="View 1" class="thumb active"
+                            onclick="changeImage(this)">
+                        <img src="assets/couture-gown.png" alt="View 2" class="thumb" onclick="changeImage(this)">
+                        <img src="assets/designer-handbag.png" alt="Paired Bag" class="thumb"
+                            onclick="changeImage(this)">
+                        <img src="assets/gold-jewelry.png" alt="Paired Accessories" class="thumb"
+                            onclick="changeImage(this)">
+                    </div>
+                </div>
+
+                <!-- Details -->
+                <div class="product-details-info reveal reveal-delay-2">
+                    <span class="product-brand-label">Valentino</span>
+                    <h1>Crimson Gala Gown</h1>
+                    <div class="product-rating-bar">
+                        <span class="stars">★★★★★</span>
+                        <span>5.0 (34 reviews)</span>
+                    </div>
+
+                    <div class="product-price-section">
+                        <p class="price-label">Rental Price Starting At</p>
+                        <p class="price">$285 <span>/ 4 days</span></p>
+                        <p class="retail-price">Retail Value: $8,500</p>
+                    </div>
+
+                    <p class="product-description">
+                        A breathtaking floor-length gown in signature Valentino crimson. Crafted from the finest Italian
+                        silk with a dramatic sweetheart neckline and
+                        a flowing train. This piece has graced multiple red-carpet events and is meticulously maintained
+                        to pristine condition after every rental.
+                    </p>
+
+                    <!-- Duration Selector -->
+                    <div class="duration-selector">
+                        <label>Select Rental Duration</label>
+                        <div class="duration-options">
+                            <div class="duration-option" onclick="selectDuration(this)">
+                                <strong>4 Days</strong>
+                                <span class="dur-price">$285</span>
+                            </div>
+                            <div class="duration-option selected" onclick="selectDuration(this)">
+                                <strong>7 Days</strong>
+                                <span class="dur-price">$385</span>
+                            </div>
+                            <div class="duration-option" onclick="selectDuration(this)">
+                                <strong>14 Days</strong>
+                                <span class="dur-price">$520</span>
+                            </div>
+                            <div class="duration-option" onclick="selectDuration(this)">
+                                <strong>30 Days</strong>
+                                <span class="dur-price">$780</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Calendar -->
+                    <div class="availability-calendar">
+                        <label>Availability Calendar</label>
+                        <div class="calendar-widget" id="calendarWidget">
+                            <div class="calendar-header">
+                                <button onclick="changeMonth(-1)">‹</button>
+                                <h4 id="calendarMonth">March 2026</h4>
+                                <button onclick="changeMonth(1)">›</button>
+                            </div>
+                            <div class="calendar-days" id="calendarDays">
+                                <!-- Generated by JS -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Reserve Button -->
+                    <div class="reserve-actions">
+                        <button class="btn btn-primary btn-reserve" onclick="handleReserve()">
+                            Reserve Now — $385
+                        </button>
+                        <button class="btn-wishlist" onclick="toggleWishlist(this)"
+                            aria-label="Add to wishlist">♡</button>
+                    </div>
+
+                    <!-- Features -->
+                    <ul class="product-features">
+                        <li><span class="feature-icon">✦</span> Free express shipping & insured returns</li>
+                        <li><span class="feature-icon">✦</span> Professional dry-cleaning included</li>
+                        <li><span class="feature-icon">✦</span> Backup size available upon request</li>
+                        <li><span class="feature-icon">✦</span> Styling consultation included</li>
+                        <li><span class="feature-icon">✦</span> Available sizes: XS, S, M, L</li>
+                        <li><span class="feature-icon">✦</span> Authenticity guaranteed</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== FOOTER ====== -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <div class="footer-logo">LUXE<span style="color:var(--white);font-weight:400;">RENTALS</span></div>
+                    <p class="footer-desc">The world's premier fashion rental platform. Rent luxury designer pieces for
+                        any occasion. Sustainable fashion, elevated.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Instagram">IG</a>
+                        <a href="#" aria-label="Pinterest">PI</a>
+                        <a href="#" aria-label="TikTok">TK</a>
+                        <a href="#" aria-label="Twitter">X</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Collections</h4>
+                    <ul>
+                        <li><a href="#">Evening Wear</a></li>
+                        <li><a href="#">Wedding & Bridal</a></li>
+                        <li><a href="#">Designer Bags</a></li>
+                        <li><a href="#">Accessories</a></li>
+                        <li><a href="#">New Arrivals</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">How It Works</a></li>
+                        <li><a href="#">Sustainability</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Shipping & Returns</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 LUXE RENTALS. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
